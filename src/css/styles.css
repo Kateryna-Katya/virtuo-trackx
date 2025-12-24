@@ -580,3 +580,147 @@ section {
         grid-template-columns: 1fr;
     }
 }
+/* --- SECTION: EDUCATION / BLOG --- */
+
+/* Сетка для двух карточек */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* Основной стиль карточки */
+.blog-card {
+    background: #fff;
+    border-radius: 24px;
+    /* Крупное скругление в стиле проекта */
+    overflow: hidden;
+    /* Чтобы картинка не вылезала при зуме */
+    border: 1px solid var(--color-border);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    /* Очень легкая базовая тень */
+    transition: var(--transition);
+    /* Используем глобальную плавную анимацию */
+    height: 100%;
+    /* Чтобы карточки были одной высоты */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Контейнер для изображения */
+.blog-card__img {
+    height: 260px;
+    /* Фиксированная высота для единообразия */
+    background: #eef2f6;
+    /* Цвет-заглушка, если картинка грузится */
+    overflow: hidden;
+    /* Критично для эффекта зума */
+}
+
+/* Само изображение */
+.blog-card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Заполнение контейнера без искажений */
+    /* Более медленная и плавная анимация специально для зума картинки */
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Тело карточки с текстом */
+.blog-card__body {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* Занимает оставшееся место */
+}
+
+/* Заголовок статьи */
+.blog-card__title {
+    font-family: var(--font-head);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--color-text);
+    line-height: 1.3;
+}
+
+/* Описание статьи */
+.blog-card__body p {
+    margin-bottom: 24px;
+    opacity: 0.8;
+    font-size: 1rem;
+    flex-grow: 1;
+    /* Чтобы кнопка всегда была внизу */
+}
+
+/* Текстовая кнопка-ссылка */
+.btn-text {
+    color: var(--color-accent);
+    font-weight: 700;
+    font-family: var(--font-head);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+    align-self: flex-start;
+    /* Прижимаем влево */
+}
+
+.btn-text i {
+    transition: transform 0.3s ease;
+    /* Иконка двигается чуть быстрее */
+}
+
+/* --- HOVER EFFECTS (Эффекты наведения) --- */
+
+/* 1. Эффект наведения на всю карточку */
+.blog-card:hover {
+    transform: translateY(-10px);
+    /* Поднимаем карточку вверх */
+    /* Тень становится цветной (акцентной) и более глубокой */
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
+    border-color: rgba(99, 102, 241, 0.3);
+}
+
+/* 2. Зум изображения при наведении на карточку */
+.blog-card:hover .blog-card__img img {
+    transform: scale(1.08);
+    /* Плавное увеличение на 8% */
+}
+
+/* 3. Эффект наведения на текстовую кнопку */
+.btn-text:hover {
+    color: var(--color-accent-soft);
+    /* Немного светлее при наведении */
+}
+
+/* Двигаем стрелочку вправо при наведении на кнопку */
+.btn-text:hover i {
+    transform: translateX(6px);
+}
+
+/* --- RESPONSIVE (Адаптив) --- */
+@media (max-width: 768px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+        /* Одна колонка на мобильных */
+        gap: 30px;
+    }
+
+    .blog-card__img {
+        height: 220px;
+        /* Чуть меньше высота картинки на мобильном */
+    }
+
+    .blog-card__body {
+        padding: 24px;
+        /* Чуть меньше отступы */
+    }
+
+    .blog-card__title {
+        font-size: 1.35rem;
+    }
+}

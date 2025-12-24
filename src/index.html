@@ -1,21 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtuo-Trackx | AI для каждого — Практики и решения</title>
+  <meta name="description"
+    content="Инновационные технологии и AI-инструменты для реальных задач. Постройте карьеру, которая работает на вас.">
+
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
+    <div class="mesh-gradient"></div>
     <load src="./partials/header.html" />
 
-    <main>
+    <main id="main-content">
       <!-- Loads the specified .html file -->
       <load src="./partials/main.html" />
     </main>
 
     <load src="./partials/footer.html" />
+<div id="cookie-popup" class="cookie-popup hidden">
+  <div class="cookie-content">
+    <p>Этот сайт использует cookies для улучшения работы. Подробнее — в нашей <a href="./cookies.html">Cookie
+        политике</a>.</p>
+    <button id="accept-cookies" class="btn btn--primary btn--sm">Принять</button>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/split-type"></script>
 
     <script type="module" src="./main.js"></script>
   </body>

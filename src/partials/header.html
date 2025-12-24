@@ -1,19 +1,37 @@
 <header class="header">
-  <div class="container">
+  <div class="container header__container">
+    <a href="/" class="logo">
+      <span class="logo__icon"></span>
+      <span class="logo__text">Virtuo-Trackx</span>
+    </a>
+
     <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#" class="nav__link active">Главная</a></li>
+        <li class="nav__item"><a href="#features" class="nav__link">Возможности</a></li>
+        <li class="nav__item"><a href="#cases" class="nav__link">Кейсы</a></li>
+        <li class="nav__item"><a href="#innovation" class="nav__link">Инновации</a></li>
+        <li class="nav__item"><a href="#education" class="nav__link">Обучение</a></li>
+        <li class="nav__item"><a href="#faq" class="nav__link">Вопросы</a></li>
       </ul>
     </nav>
+
+    <div class="header__actions">
+      <a href="#contact" class="btn btn--primary">Начать</a>
+      <button class="burger" aria-label="Menu">
+        <span></span>
+      </button>
+    </div>
   </div>
 </header>
+<div class="mobile-menu-overlay">
+  <nav class="mobile-nav">
+    <ul class="mobile-nav__list">
+      <li><a href="#" class="mobile-nav__link">Главная</a></li>
+      <li><a href="#features" class="mobile-nav__link">Возможности</a></li>
+      <li><a href="#innovation" class="mobile-nav__link">Инновации</a></li>
+      <li><a href="#education" class="mobile-nav__link">Обучение</a></li>
+      <li><a href="#contact" class="mobile-nav__link">Начать</a></li>
+    </ul>
+  </nav>
+</div>
